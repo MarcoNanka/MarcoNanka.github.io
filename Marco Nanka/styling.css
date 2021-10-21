@@ -218,7 +218,14 @@ body {
   color: var(--color1);
   transition: 0.3s ease color;
 }
-@media (max-width: 600px) {
+.selectyourlanguage {
+  padding: 0;
+  margin: 0;
+  margin-top: 0.425rem;
+  right: 3rem;
+  position: absolute;
+}
+@media (max-width: 900px) {
   .bigscreennav {
     display: none;
   }
@@ -331,6 +338,7 @@ body {
   background-repeat: no-repeat;
   background-position: right center;
 }
+
 .side_nav ul li a:hover {
   background-size: 100% 100%;
   color: var(--black);
@@ -345,7 +353,16 @@ body {
   cursor: pointer;
   color: var(--color2);
 }
-@media (min-width: 601px) {
+.selectyourlanguage2 {
+  left: 80px;
+  padding-top: 15px;
+  position: absolute;
+}
+ul.lang-list li.lang a {
+  border-bottom: none;
+}
+
+@media (min-width: 901px) {
   .side_nav {
     display: none;
   }
@@ -386,6 +403,9 @@ body {
   width: 40vw;
 }
 .typing {
+  color: var(--color2);
+}
+.typing2 {
   color: var(--color2);
 }
 .borderleft {
@@ -727,12 +747,12 @@ body {
     margin-bottom: 0.25rem;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 870px) {
   .skillsgridlayoutsinglegrids {
     min-height: 38vw;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 780px) {
   .skillsgridlayoutsinglegrids {
     min-height: 45vw;
   }
@@ -1054,4 +1074,3 @@ body {
     font-size: 1rem;
   }
 }
-/* values: end */

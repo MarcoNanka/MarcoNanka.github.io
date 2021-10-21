@@ -81,10 +81,10 @@ document.addEventListener('DOMContentLoaded', (e) => {
   }, 2000);
   
 })
-   
+
 $('a').click(function(){
   $('html, body').animate({
-      scrollTop: $( $(this).attr('href') ).offset().top
+    scrollTop: $( $(this).attr('href') ).offset().top
   }, 500);
   return false;
 });
@@ -94,10 +94,60 @@ $('a').click(function(){
 // side nav
 
 $(document).ready(function() {
-	$(".nav_ico").click(function(){
-		$(this).toggleClass("active");
+  $(".nav_ico").click(function(){
+    $(this).toggleClass("active");
 		$(".side_nav,.nav-overlay").toggleClass("active");
 		
 		return false
 	});
 });
+
+//english index.html -> switch to german
+
+$(document).ready(function(){
+  $(".lang-flag").click(function(){
+    $(".language-dropdown").toggleClass("open");
+  });
+  $("ul.lang-list li").click(function(){
+    $("ul.lang-list li").removeClass("selected");
+    $(this).addClass("selected");
+    if($(this).hasClass('lang-en')){
+      $(".language-dropdown").find(".lang-flag").addClass("lang-en").removeClass("lang-de");
+      $("#lang_selected").html("<p>EN</p>")
+    }else if($(this).hasClass('lang-de')){
+      $(".language-dropdown").find(".lang-flag").addClass("lang-de").removeClass("lang-en");
+      $("#lang_selected").html("<p>DE</p>")
+    }
+    $(".language-dropdown").removeClass("open");
+  });
+})
+
+
+// $(document).ready(function(){
+  //   $(".lang-flag").click(function(){
+    //     $(".language-dropdown").toggleClass("open");
+    //   });
+    //   $("ul.lang-list li").click(function(){
+      //     $("ul.lang-list li").removeClass("selected");
+      //     $(this).addClass("selected");
+      //     if($(this).hasClass('lang-en')){
+        //       $(".language-dropdown").find(".lang-flag").addClass("lang-en").removeClass("lang-es").removeClass("lang-pt");
+        //       $("#lang_selected").html("<p>EN</p>")
+        //     }else if($(this).hasClass('lang-pt')){
+          //       $(".language-dropdown").find(".lang-flag").addClass("lang-pt").removeClass("lang-es").removeClass("lang-en");
+          //     $("#lang_selected").html("<p>PT</p>")
+          //     }else{
+            //       $(".language-dropdown").find(".lang-flag").addClass("lang-es").removeClass("lang-en").removeClass("lang-pt");
+            //       $("#lang_selected").html("<p>ES</p>")
+            //     }
+            //     $(".language-dropdown").removeClass("open");
+            //   });
+            // })
+
+            
+            var typed2 = new Typed(".typing2", {
+              strings: ["Elektrotechnikstudent!", "Entwickler!", "Sportbegeisteter!"],
+              typeSpeed: 100,
+              backSpeed: 70,
+              loop: true
+            });

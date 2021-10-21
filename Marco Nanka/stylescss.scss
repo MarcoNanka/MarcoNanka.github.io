@@ -1,0 +1,116 @@
+// language: start
+
+.shadow-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.shadow-2 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.shadow-3 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.shadow-4 {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.shadow-5 {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.language-dropdown {
+  .lang-en {
+    border-left: 4px solid rgb(50, 50, 148);
+    .flag {
+      background-image: url("images/vereinigtes-konigreich\ copy.png");
+    }
+  }
+  .lang-de {
+    border-left: 4px solid rgb(219, 172, 18);
+    .flag {
+      background-image: url("images/deutschland.png");
+    }
+  }
+  //   .lang-es {
+  //     border-left: 4px solid #da4d13;
+  //     .flag {
+  //       background-image: url("http://www.imaginarium.pt/responsive/2015/images/iconsFicha/banderaES.png");
+  //     }
+  //   }
+  label,
+  ul.lang-list li {
+    display: block;
+    width: 40px;
+    height: 30px;
+    background: var(--white);
+    padding: 0px 6px;
+    cursor: pointer;
+  }
+  ul.lang-list {
+    @extend .shadow-1;
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    li {
+      border-bottom: 1px solid var(--white);
+      &:last-child {
+        border-bottom-right-radius: 2px;
+        border-bottom-left-radius: 2px;
+      }
+      &.selected {
+        display: none;
+      }
+    }
+  }
+  label {
+    @extend .shadow-1;
+    position: relative;
+
+    border-radius: 3px;
+    z-index: 2;
+  }
+  .lang-flag,
+  .lang-list .lang {
+    .flag {
+      float: left;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      background-size: 35px 35px;
+      background-repeat: no-repeat;
+      background-position: center;
+      &:hover {
+        // transform: scale(1.1);
+      }
+    }
+  }
+  &.open {
+    ul.lang-list {
+      visibility: visible;
+      opacity: 1;
+    }
+    label {
+      @extend .shadow-2;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+  }
+}
+.animate {
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+}
+
+.lang-flag,
+.lang-list {
+  @extend .animate;
+}
+
+//language: end
