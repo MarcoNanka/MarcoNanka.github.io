@@ -1,3 +1,5 @@
+//navigation bar
+
 const sections = document.querySelectorAll("section");
 const navLi = document.querySelectorAll(".bigscreennav .containernavbar ul li");
 window.addEventListener("scroll", () => {
@@ -9,7 +11,7 @@ window.addEventListener("scroll", () => {
       current = section.getAttribute("id");
     }
   });
-
+  
   navLi.forEach((li) => {
     li.classList.remove("active");
     if (li.classList.contains(current)) {
@@ -19,7 +21,24 @@ window.addEventListener("scroll", () => {
   });
 });
 
+// side nav
 
+$(document).ready(function() {
+  $(".nav_ico").click(function(){
+    $(this).toggleClass("active");
+    $(".side_nav,.nav-overlay, .header").toggleClass("active");
+    
+    return false
+  });
+});
+$(document).ready(function() {
+$(".sidenavpoints").click(function() {
+  $(".side_nav, .nav-overlay, .nav_ico, .header").toggleClass("active");
+  return false
+});
+});
+
+//dark mode/light mode
 
 const toggle = document.getElementById("toggle");
 const theme = window.localStorage.getItem("theme");
@@ -49,6 +68,7 @@ toggle2.addEventListener("click", () => {
 });
 
 
+//scroll up button
 $(document).ready(function(){
   $(window).scroll(function(){
   if(this.scrollY > 500){
@@ -59,11 +79,11 @@ $(document).ready(function(){
 });
 $('.scroll-up-btn').click(function(){
   $('html').animate({scrollTop: 0});
-  // removing smooth scroll on slide-up button click
   $('html').css("scrollBehavior", "auto");
 });
+//english typewriter
 var typed = new Typed(".typing", {
-  strings: ["Student in EI!", "Developer!", "Sportsman!"],
+  strings: ["Student in EI", "Developer", "Sportsman"],
   typeSpeed: 100,
   backSpeed: 70,
   loop: true
@@ -72,15 +92,16 @@ var typed = new Typed(".typing", {
 })
 
 
+//splashscreen 
 const splash = document.querySelector('.splash');
-
-
 document.addEventListener('DOMContentLoaded', (e) => {
   setTimeout(()=>{
     splash.classList.add('display-none');
   }, 2000);
   
 })
+
+//anchor links
 
 $('a').click(function(){
   $('html, body').animate({
@@ -91,18 +112,8 @@ $('a').click(function(){
 
 
 
-// side nav
 
-$(document).ready(function() {
-  $(".nav_ico").click(function(){
-    $(this).toggleClass("active");
-		$(".side_nav,.nav-overlay").toggleClass("active");
-		
-		return false
-	});
-});
-
-//english index.html -> switch to german
+//language switcher
 
 $(document).ready(function(){
   $(".lang-flag").click(function(){
@@ -122,31 +133,10 @@ $(document).ready(function(){
   });
 })
 
-
-// $(document).ready(function(){
-  //   $(".lang-flag").click(function(){
-    //     $(".language-dropdown").toggleClass("open");
-    //   });
-    //   $("ul.lang-list li").click(function(){
-      //     $("ul.lang-list li").removeClass("selected");
-      //     $(this).addClass("selected");
-      //     if($(this).hasClass('lang-en')){
-        //       $(".language-dropdown").find(".lang-flag").addClass("lang-en").removeClass("lang-es").removeClass("lang-pt");
-        //       $("#lang_selected").html("<p>EN</p>")
-        //     }else if($(this).hasClass('lang-pt')){
-          //       $(".language-dropdown").find(".lang-flag").addClass("lang-pt").removeClass("lang-es").removeClass("lang-en");
-          //     $("#lang_selected").html("<p>PT</p>")
-          //     }else{
-            //       $(".language-dropdown").find(".lang-flag").addClass("lang-es").removeClass("lang-en").removeClass("lang-pt");
-            //       $("#lang_selected").html("<p>ES</p>")
-            //     }
-            //     $(".language-dropdown").removeClass("open");
-            //   });
-            // })
-
+//german typewriter
             
             var typed2 = new Typed(".typing2", {
-              strings: ["Elektrotechnikstudent!", "Entwickler!", "Sportbegeisteter!"],
+              strings: ["Elektrotechnikstudent", "Entwickler", "Sportbegeisteter"],
               typeSpeed: 100,
               backSpeed: 70,
               loop: true
