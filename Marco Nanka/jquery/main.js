@@ -38,6 +38,8 @@ $(".sidenavpoints").click(function() {
 });
 });
 
+
+
 //dark mode/light mode
 
 const toggle = document.getElementById("toggle");
