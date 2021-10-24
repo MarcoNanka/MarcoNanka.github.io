@@ -8,6 +8,8 @@ html {
     "Helvetica Neue", Arial, sans-serif;
   font-size: 24px;
   scroll-behavior: smooth;
+  min-height: 100%;
+  position: relative;
 }
 
 /* splash screen: start */
@@ -129,6 +131,7 @@ body {
   --navbarhover: #87a8a4;
   --skillshover: rgb(191, 177, 204); /*color2*/
   background-color: var(--white);
+  --footerbackgroundcolor: rgb(228, 224, 224);
 }
 .dark {
   --whitenavbarmobile: rgb(0, 0, 0, 0.9);
@@ -139,6 +142,7 @@ body {
   --color2: rgb(225, 81, 25);
   --skillshover: #283d58;
   --navbarhover: #969adb;
+  --footerbackgroundcolor: rgb(228, 224, 224);
 }
 .button {
   background-color: var(--white);
@@ -1087,3 +1091,66 @@ ul.lang-list li.lang a {
     font-size: 1rem;
   }
 }
+
+/* footer: start */
+
+.footer {
+  width: 100%;
+  margin-bottom: 0;
+  padding: 1rem 3rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--footerbackgroundcolor);
+}
+.contactme img {
+  margin-right: 1rem;
+}
+.contactme {
+  display: flex;
+  flex-direction: row;
+}
+.footerinstagram img {
+  height: 1.1rem;
+  margin-top: 0.5rem;
+}
+.footermail img {
+  height: 2rem;
+}
+.copyright {
+  margin-right: 2rem;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.lastvalueslongertext {
+  padding-bottom: 10rem;
+}
+@media (max-width: 1500px) {
+  .lastvalueslongertext {
+    padding-bottom: 6rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .lastvalueslongertext {
+    padding-bottom: 8rem;
+  }
+  .contactme img {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  .footer {
+    flex-direction: column-reverse;
+  }
+  .contactme {
+    margin: 0 auto;
+  }
+  .copyright {
+    margin: 0 auto;
+  }
+}
+/* footer: end */
