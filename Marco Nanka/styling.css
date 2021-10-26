@@ -131,7 +131,6 @@ body {
   --navbarhover: #87a8a4;
   --skillshover: rgb(191, 177, 204); /*color2*/
   background-color: var(--white);
-  --footerbackgroundcolor: rgb(228, 224, 224);
 }
 .dark {
   --whitenavbarmobile: rgb(0, 0, 0, 0.9);
@@ -142,7 +141,6 @@ body {
   --color2: rgb(225, 81, 25);
   --skillshover: #283d58;
   --navbarhover: #969adb;
-  --footerbackgroundcolor: rgb(228, 224, 224);
 }
 .button {
   background-color: var(--white);
@@ -1097,34 +1095,36 @@ ul.lang-list li.lang a {
 .footer {
   width: 100%;
   margin-bottom: 0;
-  padding: 1rem 3rem;
+  padding: 2rem 3rem;
   position: absolute;
   left: 0;
   bottom: 0;
   color: black;
   display: flex;
   flex-direction: row;
-  background-color: var(--footerbackgroundcolor);
-}
-.contactme img {
-  margin-right: 1rem;
+  background-color: var(--grey1);
 }
 .contactme {
   display: flex;
   flex-direction: row;
 }
-.footerinstagram img {
-  height: 1.1rem;
-  margin-top: 0.5rem;
+.fa-envelope {
+  color: var(--black);
+  margin-top: 0.4rem;
+  font-size: 1.1rem;
 }
-.footermail img {
-  height: 2rem;
+.fa-instagram {
+  color: var(--black);
+  margin-top: 0.4rem;
+  font-size: 1.1rem;
+  margin-left: 1rem;
 }
 .copyright {
   margin-right: 2rem;
   font-size: 0.8rem;
   margin-top: 0.5rem;
   text-align: center;
+  color: var(--black);
 }
 .lastvalueslongertext {
   padding-bottom: 10rem;
@@ -1139,8 +1139,10 @@ ul.lang-list li.lang a {
   .lastvalueslongertext {
     padding-bottom: 8rem;
   }
-  .contactme img {
+  .fa-envelope {
     margin-right: 0.5rem;
+  }
+  .fa-instagram {
     margin-left: 0.5rem;
   }
   .footer {
@@ -1148,6 +1150,7 @@ ul.lang-list li.lang a {
   }
   .contactme {
     margin: 0 auto;
+    margin-bottom: 0.8rem;
   }
   .copyright {
     margin: 0 auto;
