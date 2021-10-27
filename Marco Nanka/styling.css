@@ -11,6 +11,10 @@ html {
   min-height: 100%;
   position: relative;
 }
+.fbs {
+  max-width: 2200px;
+  margin: 0 auto;
+}
 
 /* splash screen: start */
 
@@ -420,6 +424,12 @@ ul.lang-list li.lang a {
   border-left: 0.15rem solid var(--color1);
   padding-left: 1rem;
 }
+@media (min-width: 2200px) {
+  .picturehome img {
+    max-width: 880px;
+  }
+}
+
 @media (max-width: 1200px) {
   .picturehome img {
     margin-left: 3rem;
@@ -566,6 +576,11 @@ ul.lang-list li.lang a {
 .attributes2answer {
   margin-bottom: 0.5rem;
 }
+@media (min-width: 2200px) {
+  .pictureabout img {
+    max-width: 550px;
+  }
+}
 @media (max-width: 1020px) {
   .aboutdisplayinline {
     flex-direction: column;
@@ -711,6 +726,14 @@ ul.lang-list li.lang a {
 .tellaboutskills a:hover {
   text-decoration: var(--color1);
 }
+@media (min-width: 2200px) {
+  .skillsgridlayoutsinglegrids {
+    max-width: 578px;
+    height: 550px;
+    min-height: 0px;
+    margin: 0.2rem 0;
+  }
+}
 @media (max-width: 1200px) {
   .skillsgridlayout {
     width: 90%;
@@ -787,11 +810,6 @@ ul.lang-list li.lang a {
   .skillsmyskills {
     padding-left: 0.25rem;
     margin-left: 1rem;
-  }
-}
-@media (min-width: 2000px) {
-  .skillsgridlayoutsinglegrids {
-    min-height: 20vw;
   }
 }
 /* skills: end */
@@ -968,6 +986,33 @@ ul.lang-list li.lang a {
   object-fit: cover;
   margin: 2rem 1rem 0 1rem;
 }
+@media (min-width: 2200px) {
+  .image {
+    width: 550px;
+    height: 550px;
+  }
+
+  .image__img {
+    width: 550px;
+  }
+  .image img {
+    width: 550px;
+    height: 550px;
+  }
+
+  .image__overlay {
+    width: 550px;
+    height: 550px;
+  }
+  .moreimagessingleimage img {
+    width: 550px;
+    height: 550px;
+  }
+  .moreimages video {
+    width: 550px;
+    height: 550px;
+  }
+}
 @media (max-width: 1200px) {
   .valueslongertext {
     margin-bottom: 2rem;
@@ -1128,6 +1173,12 @@ ul.lang-list li.lang a {
 }
 .lastvalueslongertext {
   padding-bottom: 10rem;
+}
+@media (min-width: 2200px) {
+  .footer {
+    width: 100vw;
+    padding-left: 25vw;
+  }
 }
 @media (max-width: 1500px) {
   .lastvalueslongertext {
