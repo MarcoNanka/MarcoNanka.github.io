@@ -192,6 +192,32 @@ body {
 .scroll-up-btn:hover {
   filter: brightness(90%);
 }
+@media (min-width: 2300px) {
+  .scroll-up-btn {
+    right: 4vw;
+  }
+}
+@media (min-width: 2500px) {
+  .scroll-up-btn {
+    right: 8vw;
+  }
+}
+@media (min-width: 2500px) {
+  .scroll-up-btn {
+    right: 10vw;
+  }
+}
+@media (min-width: 2850px) {
+  .scroll-up-btn {
+    right: 13vw;
+  }
+}
+
+@media (min-width: 3200px) {
+  .scroll-up-btn {
+    right: 15vw;
+  }
+}
 
 /* scroll-up button: end */
 
